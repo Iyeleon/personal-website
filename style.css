@@ -5,6 +5,7 @@
 html, body {
     height: 100vh;
     margin: 0;
+    scroll-behavior: smooth;
 }
 /* -------- Main Sections -------- */
 #header {
@@ -30,13 +31,13 @@ footer p {
     font-size: 0.75rem;
 }
 /* --------Landing page------------ */
-#landing {
+#landing, #blog-landing {
     width: 100vw;
     position: fixed;
     bottom: 0;
     z-index: 0;
 }
-#projects {
+#projects, #blog-stories {
     position: relative;
     margin-top: 100vh
     /* calc(100vh -  var(--top-margin)); */
