@@ -39,11 +39,15 @@ menuLinks = document.querySelectorAll("nav ul li a");
 menuLinks.forEach(link => {
     link.addEventListener('click', function(event){
         // event.preventDefault();
+        // fetch current active pages
         let currActive = Array.from(document.getElementsByClassName('active')).map(ele => {return ele.id})
+        // fetch target page
         let targetPageID = this.getAttribute("href").substring(1)
-        console.log("Target Page ID:", targetPageID)
-        console.log(this.getAttribute("href").substring(1))
+        // fetch target page
         const targetPage = document.getElementById(targetPageID)
+        // activate target page
+        console.log(this.getAttribute("href"))
+        console.log(this)
         targetPage.classList.remove('inactive')
         targetPage.classList.add('active')
         if (targetPageID == 'projects'){            
